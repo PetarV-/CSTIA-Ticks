@@ -69,3 +69,27 @@ fun drawLine(im:image) = fn (clr:color) => fn ((x0,y0):xy) => fn ((x1,y1):xy) =>
                                                                   ); 
                                                                   drawPixel im clr (x1,y1) 
                                                                 end;
+val PETAR = image (2000,400) (200,200,200);
+drawHorLine(PETAR,50,(0,0,0));
+drawHorLine(PETAR,350,(0,0,0));
+drawVertLine(PETAR,50,(0,0,0));
+drawVertLine(PETAR,1950,(0,0,0));
+drawLine PETAR (255,0,0) (100,100) (300,100);
+drawLine PETAR (255,0,0) (100,100) (100,300);
+drawLine PETAR (255,0,0) (100,300) (200,300);
+drawLine PETAR (255,0,0) (200,300) (200,100);
+drawLine PETAR (0,100,0) (100,500) (300,500);
+drawLine PETAR (0,100,0) (100,500) (100,700);
+drawLine PETAR (0,100,0) (200,500) (200,700);
+drawLine PETAR (0,100,0) (300,500) (300,700);
+drawLine PETAR (0,0,255) (100,900) (100,1100);
+drawLine PETAR (0,0,255) (100,1000) (300,1000);
+drawLine PETAR (255,0,255) (100,1400) (300,1300);
+drawLine PETAR (255,0,255) (100,1400) (300,1500);
+drawLine PETAR (255,0,255) (200,1300) (200,1500);
+drawLine PETAR (255,255,0) (100,1700) (300,1700);
+drawLine PETAR (255,255,0) (100,1700) (100,1900);
+drawLine PETAR (255,255,0) (100,1900) (200,1900);
+drawLine PETAR (255,255,0) (200,1900) (200,1700);
+drawLine PETAR (255,255,0) (200,1700) (300,1900);
+toPPM PETAR "Petar.PPM";
