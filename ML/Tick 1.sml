@@ -7,7 +7,9 @@ rootplus(1.0, 121.0, 11.0);
 compute(1.0, 121.0, 11.0, it);
 rootplus(1.22, 3.34, 2.28);
 compute(1.22, 3.34, 2.28, it);
-fun facr(n:int) = if n = 0 then 1 else n*facr(n-1); 
+fun facr(n:int) = if n = 0 then 1 
+                  else n*facr(n-1); 
 facr(3);
-fun faci(n:int, comp:int) = if n = 0 then comp else faci(n-1,comp*n); 
+fun faci(n:int, comp:int) = if n = 0 then comp 
+                            else faci(n-1,comp*n); 
 faci(3,1);
